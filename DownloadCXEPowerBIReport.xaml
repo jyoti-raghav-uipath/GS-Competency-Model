@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DownloadCXEPowerBIReport" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1150,2853.33333333333" sap2010:WorkflowViewState.IdRef="DownloadCXEPowerBIReport_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DownloadCXEPowerBIReport" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="857.333333333333,2918" sap2010:WorkflowViewState.IdRef="DownloadCXEPowerBIReport_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -70,14 +70,13 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DownloadCXEPowerBIReport" sap:VirtualizedContainerService.HintSize="508.666666666667,2788.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DownloadCXEPowerBIReport" sap:VirtualizedContainerService.HintSize="546,2853.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="data" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt" />
       <Variable x:TypeArguments="x:String" Name="powerBI_dashboard_url_cxe">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String" xml:space="preserve">https://app.powerbi.com/groups/me/apps/b474cda1-4870-4c3b-a9bb-a8bce8009661/reports/c79d4419-3ff8-43dc-8383-3dfcc6da964c
-/ReportSection095592941e77c484de4c?ctid=d8353d2a-b153-4d17-8827-902c51f72357</Literal>
+          <Literal x:TypeArguments="x:String">https://app.powerbi.com/groups/me/apps/b474cda1-4870-4c3b-a9bb-a8bce8009661/reports/c79d4419-3ff8-43dc-8383-3dfcc6da964c/ReportSection095592941e77c484de4c?ctid=d8353d2a-b153-4d17-8827-902c51f72357&amp;experience=power-bi</Literal>
         </Variable.Default>
       </Variable>
     </Sequence.Variables>
@@ -86,7 +85,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="466.666666666667,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[System.IO.Directory.GetCurrentDirectory+&quot;\Input\PowerBI Report\PowerBICXE.xlsx&quot;]">
+    <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="484,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[System.IO.Directory.GetCurrentDirectory+&quot;\Input\PowerBI Report\PowerBICXE.xlsx&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -94,7 +93,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Delete>
-    <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="466.666666666667,22" sap2010:WorkflowViewState.IdRef="Delete_2" Path="[System.IO.Directory.GetCurrentDirectory+&quot;\Modules\Input\data.xlsx&quot;]">
+    <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="484,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delete_2" Path="[System.IO.Directory.GetCurrentDirectory+&quot;\Modules\Input\data.xlsx&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -102,22 +101,22 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Delete>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Private: Open Browser" sap:VirtualizedContainerService.HintSize="466.666666666667,2098.66666666667" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[powerBI_dashboard_url_cxe]">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Private: Open Browser" sap:VirtualizedContainerService.HintSize="484,2138" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[powerBI_dashboard_url_cxe]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1996" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,2034" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <ui:OnUiElementAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="On Element Appear 'PATH'" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_1" RepeatForever="False">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="388,25.3333333333333" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:OnUiElementAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="On Element Appear 'PATH'" sap:VirtualizedContainerService.HintSize="388,25.3333333333333" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_1" RepeatForever="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,104.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -142,7 +141,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:OnUiElementAppear>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'MAT-ICON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'MAT-ICON'" sap:VirtualizedContainerService.HintSize="388,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -186,7 +185,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'PATH'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'PATH'" sap:VirtualizedContainerService.HintSize="388,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -208,8 +207,8 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
-            <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Hover_1">
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="388,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="388,107.333333333333" sap2010:WorkflowViewState.IdRef="Hover_1">
               <ui:Hover.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -231,7 +230,7 @@
                 </ui:Target>
               </ui:Hover.Target>
             </ui:Hover>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="388,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -243,7 +242,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0470f20a-2b8a-4ba2-81d2-7fcd98cef1cc" InformativeScreenshot="43aedeb496446fdd3a87b5fbcafcda39" Selector="&lt;html app='chrome.exe' title='Technical Competency - Power BI' /&gt;&lt;webctrl tag='svg' class='unselectable' parentclass='scroll-bar-part-arrow unselectable' title='Technical Competency - Power BI' idx='*' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0470f20a-2b8a-4ba2-81d2-7fcd98cef1cc" InformativeScreenshot="23b525c4b3201aab940ea660c8c59ffa" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;root&amp;gt;mat-sidenav-container&amp;gt;mat-sidenav-content&amp;gt;tri-shell-panel-outlet&amp;gt;tri-extension-panel-outlet&amp;gt;mat-sidenav-container&amp;gt;mat-sidenav-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tri-shell&amp;gt;tri-extension-page-outlet&amp;gt;div&amp;gt;report&amp;gt;exploration-container&amp;gt;div&amp;gt;div&amp;gt;docking-container&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;exploration-host&amp;gt;div&amp;gt;div&amp;gt;exploration&amp;gt;div&amp;gt;explore-canvas&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;visual-container-repeat&amp;gt;visual-container&amp;gt;transform&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;visual-modern&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='pvExplorationHost' tag='DIV' class='scroll-bar-part-bar' parentclass='scroll-bar-div' idx='2' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -253,7 +252,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="388,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -265,7 +264,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f0cfd5a4-bd94-4824-9b5c-ab32f70ec57e" InformativeScreenshot="653271de11d3dcaa599e868beb7f499b" Selector="&lt;html app='chrome.exe' title='Technical Competency - Power BI' /&gt;&lt;webctrl parentid='pvExplorationHost' tag='I' class='glyphicon pbi-glyph-more glyph-small' parentclass='vcMenuBtn' title='Technical Competency - Power BI' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f0cfd5a4-bd94-4824-9b5c-ab32f70ec57e" InformativeScreenshot="f9e8c2dfc1f601ffd4aab225d66d99fd" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;root&amp;gt;mat-sidenav-container&amp;gt;mat-sidenav-content&amp;gt;tri-shell-panel-outlet&amp;gt;tri-extension-panel-outlet&amp;gt;mat-sidenav-container&amp;gt;mat-sidenav-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tri-shell&amp;gt;tri-extension-page-outlet&amp;gt;div&amp;gt;report&amp;gt;exploration-container&amp;gt;div&amp;gt;div&amp;gt;docking-container&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;exploration-host&amp;gt;div&amp;gt;div&amp;gt;exploration&amp;gt;div&amp;gt;explore-canvas&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;visual-container-repeat&amp;gt;visual-container&amp;gt;transform&amp;gt;div&amp;gt;visual-container-header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;visual-container-options-menu&amp;gt;visual-header-item-container&amp;gt;div&amp;gt;button&amp;gt;i' tag='I' title='Technical Competency - Power BI' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -275,7 +274,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  2'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  2'" sap:VirtualizedContainerService.HintSize="388,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -297,7 +296,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="388,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
