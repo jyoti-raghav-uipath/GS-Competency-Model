@@ -83,7 +83,6 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="_21_10FilterUserList" sap:VirtualizedContainerService.HintSize="1565.33333333333,20677.3333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -101,11 +100,7 @@
       <Variable x:TypeArguments="sd:DataTable" Name="dt_foundation" />
       <Variable x:TypeArguments="x:String" Default="https://uipath.highspot.com/items/62680e56b947a5e4e37e86f7?lfrm=shp.21" Name="highspotExpertWorkshopLink" />
       <Variable x:TypeArguments="sd:DataTable" Name="mailSent_dt" />
-      <Variable x:TypeArguments="x:String" Name="foundationCourseLink">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://academy.uipath.com/internal/courses/20234-uipath-business-automation-platform-updates</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://academy.uipath.com/internal/courses/20234-uipath-business-automation-platform-updates" Name="foundationCourseLink" />
       <Variable x:TypeArguments="x:String" Name="fileName" />
       <Variable x:TypeArguments="x:String" Name="no_employees" />
       <Variable x:TypeArguments="sd:DataTable" Name="MasterSheet" />
@@ -120,40 +115,16 @@
       <Variable x:TypeArguments="x:Boolean" Name="currentRank" />
       <Variable x:TypeArguments="x:String" Name="platformPositioningCourse">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://academy.uipath.com/internal/courses/positioning-234-platform-release%E2%80%8B</Literal>
+          <Literal x:TypeArguments="x:String">https://academy.uipath.com/internal/learning-plans/uipath-platform-messaging--positioning</Literal>
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:String" Name="competitiveUpdatesCourse">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://academy.uipath.com/internal/courses/20234-uipath-competitive-updates</Literal>
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="release">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">2023.4</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://academy.uipath.com/internal/courses/20234-uipath-competitive-updates" Name="competitiveUpdatesCourse" />
+      <Variable x:TypeArguments="x:String" Default="2023.4" Name="release" />
       <Variable x:TypeArguments="x:String" Default="https://uipath.highspot.com/items/635a839d3642c5bc0995f5e4?lfrm=shp.0" Name="expertWorkshopSchedule" />
-      <Variable x:TypeArguments="x:String" Name="foundationCourseName">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">2023.4 UiPath Business Automation Platform Updates</Literal>
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="techCompModel">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://uipath.highspot.com/items/6440136c1bb35264cd32e53b</Literal>
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="uiPathPositioningCourseName">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Positioning the Value of 2023.4 Platform Release</Literal>
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="uiPathCompetitiveCourseName">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">2023.4 UiPath Competitive Updates</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="2023.4 UiPath Business Automation Platform Updates" Name="foundationCourseName" />
+      <Variable x:TypeArguments="x:String" Default="https://uipath.highspot.com/items/6440136c1bb35264cd32e53b" Name="techCompModel" />
+      <Variable x:TypeArguments="x:String" Default="Positioning the Value of 2023.4 Platform Release" Name="uiPathPositioningCourseName" />
+      <Variable x:TypeArguments="x:String" Default="2023.4 UiPath Competitive Updates" Name="uiPathCompetitiveCourseName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
